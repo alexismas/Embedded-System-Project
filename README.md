@@ -1,63 +1,17 @@
 # Embedded-System-Project
 
-cmd : 
+	Our idea comes from our will to facilitate our everyday life at home. We often get tired to think about turning off the light, check if the front door is locked or if the gas in the kitchen is really closed when we go to sleep or get out of the house. And if those things are not the way we want it to be, do what must be done ourselves, by getting up, going back to the house, etc.
 
-sudo apt-get update
-sudo apt-get update && apt-get upgrade -y
-sudo apt-get install apache2 php
-sudo apt-get install -y ssmtp mailutils mpack
-apt-get install i2c-tools
-sudo chmod g+w -R /var/www/ 
-ls -al /var/www/html
-sudo adduser www-data gpio
-sudo adduser www-data users
-sudo adduser www-data i2c
-sudo adduser pi i2c
-sudo raspi-config 
-« activate i2c »
-sudo reboot 
-ls -l dev/i2c*
-i2cdetect -y 1
+“What if we could just ask Siri to check that out for us and do what is needed to be done when asked?”
 
+The home control system already exists in many ways. But …
 
+“Does it exist through the smartphone, 
+and more precisely with Siri?”
+“Will it tell people living in the house 
+how much they consume, 
+and will it help them know what the cause of energy loss is?”
 
-chmod -R 777 /var/www/html/projet/
-
-Upload : 
-
-scp -r /Users/alexismassol/OneDrive/Documents/ESILV/S08/Embedded\ Systems\ \ architecture\ \&\ programming/Lab\ 5-8-9/projet pi@192.168.2.7:/var/www/html/projet
-
-
-Save :
-
- scp -r pi@192.168.2.7:/var/www/html/projet /Users/alexismassol/OneDrive/Documents/ESILV/S08/Embedded\ Systems\ \ architecture\ \&\ programming/Lab\ 5-8-9/projet 
-
-
-- I2C :
-
-gcc final.c -o final -lwiringPi
-
-https://www.pihomeserver.fr/2013/08/13/raspberry-pi-home-server-arduino-lier-les-deux-via-bus-i2c/
-
-http://www.gammon.com.au/images/ArduinoUno_R3_Pinouts.png
-
-https://docs.microsoft.com/en-us/windows/iot-core/media/pinmappingsrpi/rp2_pinout.png
-
-
-- Email : 
-
-Link : https://www.pihomeserver.fr/2015/08/13/envoyer-un-email-depuis-votre-raspberry-pi/
-
- sudo nano /etc/ssmtp/ssmtp.conf 
-
-Add :
-
-mailhub=smtp.gmail.com:587
-AuthUser=. . .@gmail.com
-AuthPass=. . . 
-useSTARTTLS=YES
-useTLS=YES
-
-Test : 
+Our solution is about facilitating the way we live in our home but most of all, controlling our bills. Being the real master of our home is futurist. Technology is the gate to the future buildings with positive energy and we want to innovate that way. 
 
  echo " Hello" | mail -s "This is the subject line" your email
